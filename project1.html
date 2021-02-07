@@ -11,6 +11,13 @@
               display: table;
           }
       </style>
+      <script>
+          function clickLogin() {
+              document.getElementById('userNameID').value='';
+              document.getElementById('passwordID').value='';
+              onclick=redirect();
+          }
+      </script>
     <meta charset="utf-8">
     <title>Project1</title>
     <link rel="stylesheet" type="text/css" href=""></style>
@@ -38,7 +45,7 @@
                 </td>
             </tr>
 			<tr>
-				<td><button id="loginButtonID" type="button" onclick="redirect()">Log In!</button></td>
+				<td><button id="loginButtonID" type="button" onclick=clickLogin() >Log In!</button></td>
 			</tr>
         </table>
     </form>
