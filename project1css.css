@@ -1,0 +1,17 @@
+table {
+    margin: auto;
+    display: table;
+}
+
+h1{
+    margin: auto;
+    display: table;
+}
+
+#drawingCanvasId {
+      border: 			2px solid #c3c3c3;
+      margin-right: 		auto;
+      margin-left: 		auto;
+      display: 			block;
+      background-color: 	white;
+}
