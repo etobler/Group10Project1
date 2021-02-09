@@ -22,7 +22,11 @@
           function clickLogin() {
               document.getElementById('userNameID').value='';
               document.getElementById('passwordID').value='';
-              onclick=redirect();
+              clearAfterLogin();
+          }
+          function clearAfterLogin() {
+              document.getElementById('inputFormID').remove();
+              document.getElementById('title').innerHTML="the Canvas";
           }
       </script>
     <meta charset="utf-8">
@@ -30,8 +34,7 @@
     <link rel="stylesheet" type="text/css" href=""></style>
   </head>
   <body>
-    <h1>Welcome to the Canvas!</h1>
-    <p></p>
+    <h1 id="title">Welcome to the Canvas!</h1>
     <form id="inputFormID">
         <table id="inputTableID">
             <tr>
