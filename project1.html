@@ -10,6 +10,13 @@
               margin: auto;
               display: table;
           }
+          #drawingCanvasId {
+	            border: 			2px solid #c3c3c3;
+	            margin-right: 		auto;
+	            margin-left: 		auto;
+	            display: 			block;
+	            background-color: 	white;
+          }
       </style>
       <script>
           function clickLogin() {
@@ -48,7 +55,15 @@
 			<tr>
 				<td><button id="loginButtonID" type="button" onclick=clickLogin() >Log In!</button></td>
 			</tr>
+    
         </table>
     </form>
+    <div id="canvasDivId">
+        <canvas id="drawingCanvasId" width="500" height="500"
+            onmousedown = "startDrawing(event)"
+            onmouseup   = "stopDrawing(event)">
+            Your browser does not support the Canvas tag
+        </canvas>
+    </div>
   </body>
 </html>
