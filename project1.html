@@ -6,8 +6,9 @@
     <link rel="stylesheet" type="text/css" href="project1css.css"></style>
     <script type="text/javascript" src="project1js.js"></script>
   </head>
-  <body>
-    <h1 id="title">Welcome to the Canvas!</h1>
+
+  <body onload="initialize()">
+    <h1 id="title">Welcome to WebSketch!</h1>
     <form id="inputFormID">
         <table id="inputTableID">
             <tr>
@@ -34,6 +35,13 @@
     
         </table>
     </form>
+
+    <!-- This is the Div for the buttons above the Canvas-->
+    <div class="controlDiv">
+        <button type="button" id="clear" onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <!-- This is the Div for the drawing Canvas-->
     <div id="canvasDivId">
         <canvas id="drawingCanvasId" width="500" height="500"
             onmousedown = "startDrawing(event)"

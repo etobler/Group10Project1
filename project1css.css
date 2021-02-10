@@ -8,10 +8,25 @@ h1{
     display: table;
 }
 
+.controlDiv {
+    width:          500px;
+    margin-right:   auto;
+    margin-left:    auto;
+    padding-bottom: 10px;
+    text-align:     center;
+}
+
+.controlDiv button {
+    width:          95px;
+    height:         35px;
+    font-size:      20px;
+    vertical-align: middle;
+}
+
 #drawingCanvasId {
-      border: 			2px solid #c3c3c3;
+      border: 			    2px solid #c3c3c3;
       margin-right: 		auto;
-      margin-left: 		auto;
-      display: 			block;
+      margin-left: 		    auto;
+      display: 			    block;
       background-color: 	white;
 }
