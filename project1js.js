@@ -18,7 +18,7 @@ function clearCanvas() {
 
     var confirmClear = confirm("Do you really want to clear the canvas?");
     if (confirmClear === true) {
-        context.clearRect(0, 0, 1000, 1000);
+        context.clearRect(0, 0, 500, 500);
     }
 }
 
