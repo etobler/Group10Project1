@@ -75,18 +75,21 @@ function startDrawing() {
 }
 
 function mouseEnteredCanvas(event) {
+    // showing that the mouse is now inside the canvas's borders 
     insideCanvas = true;
 }
 
 function mouseLeftCanvas(event) {
-    document.body.style.cursor = "help"
+    // showing that the mouse is now outside the canvas's borders 
     insideCanvas = false;
 }
 
 function mouseDown(event) {
+    // function starts when the user clicks their mouse 
     drawingMode = true;
 }
 
 function mouseUp(event) {
+    // function starts when the user stops clicking their moues 
     drawingMode = false;
 }
