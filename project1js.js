@@ -44,8 +44,11 @@ function setColor(color) {
     if (color == "black") {
         context.strokeStyle="#000000"
     }
+    else if (color == "white") {
+        context.strokeStyle="#FFFFFF"
+    }
     else {
-        context.strokeStyle="#000000"
+        context.strokeStyle="#FF0000"
     }
     // Will add more colors here when that functionality is added 
 }
