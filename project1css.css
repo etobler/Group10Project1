@@ -17,11 +17,45 @@ h1{
 }
 
 .controlDiv button {
-    width:          95px;
-    height:         35px;
+    /* width:          95px;
+    height:         35px; */
     font-size:      20px;
     vertical-align: middle;
 }
+
+.controlButton {
+    background-size: 69%; 
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    margin: auto;
+    height: 40px;  
+    width: 52px;
+}
+
+#penButton {
+    background-image: url("pen.jpg");
+    
+}
+
+#eraserButton {
+    background-image: url("eraser.jpg");
+}
+
+#colorButton {
+    background-image: url("colorwheel.jpeg");
+}
+
+
+#sizeButton {
+    background-image: url("blackdot.jpg");
+    
+}
+
+#saveButton {
+    background-image: url("save.png");
+}
+
 
 #drawingCanvasId {
       border: 			    2px solid #c3c3c3;
