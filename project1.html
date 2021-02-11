@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project1</title>
+    <link rel="stylesheet" type="text/css" href="project1css.css"></style>
+    <script type="text/javascript" src="project1js.js"></script>
+  </head>
+
+  <body onload="initialize()">
+    <h1 id="title">Welcome to WebSketch!</h1>
+    <p></p>
+    <form id="inputFormID">
+        <table id="inputTableID">
+            <tr>
+                <td>
+                    Username:
+                </td>
+                <td>
+                    <input 	id="userNameID" type="text" 
+                            placeholder="enterUsername" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input id="passwordID" type="test"
+                            minlength="8" placeholder="enterPassword" required>
+                </td>
+            </tr>
+			<tr>
+				<td><button id="loginButtonID" type="button" onclick=clickLogin() >Log In!</button></td>
+			</tr>
+    
+        </table>
+        <p></p><p></p>
+    </form>
+
+    <!-- This is the Div for the buttons above the Canvas-->
+    <div class="controlDiv">
+        <button id="penButton" class="controlButton" onclick="setColor('black')"></button>
+        <button id="eraserButton" class="controlButton"></button>
+        <button id="colorButton" class="controlButton"></button>
+        <button id="sizeButton" class="controlButton"></button>
+        <button id="saveButton" class="controlButton"></button>
+        <button type="button" id="clear" onclick="clearCanvas()" >Clear</button>
+    </div>
+
+    <!-- This is the Div for the drawing Canvas-->
+    <div id="canvasDivId">
+        <canvas id="drawingCanvasId" width="500" height="500"
+            onmousemove = "mouseMovement(event)"
+            onmouseout   = "mouseLeftCanvas(event)"
+            onmouseenter = "mouseEnteredCanvas(event)"
+            onmousedown = "mouseDown(event)"
+            onmouseup = "mouseUp(event)">
+            Your browser does not support the Canvas tag
+        </canvas>
+    </div>
+  </body>
+</html>
