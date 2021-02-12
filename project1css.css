@@ -24,13 +24,13 @@ h1{
 }
 
 .controlButton {
-    background-size: 69%; 
+    background-size: 50%; 
     background-position: center;
     background-color: white;
     background-repeat: no-repeat;
     margin: auto;
     height: 40px;  
-    width: 52px;
+    width: 80px;
 }
 
 #penButton {

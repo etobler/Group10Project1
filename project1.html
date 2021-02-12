@@ -43,9 +43,15 @@
         <button id="penButton" class="controlButton" onclick="setColor('black')"></button>
         <button id="eraserButton" class="controlButton" onclick="setColor('white')"></button>
         <button id="colorButton" class="controlButton"></button>
-        <button id="sizeButton" class="controlButton"></button>
+
+        <select id="sizeSelector" class="controlButton" onchange="setLineWidth(value)">
+			<option value= "5"> 5</option>
+			<option value="15">15</option>
+			<option value="25">25</option>
+		</select>
+
         <button id="saveButton" class="controlButton"></button>
-        <button type="button" id="clear" onclick="clearCanvas()" >Clear</button>
+        <button id="clearButton" class="controlButton" onclick="clearCanvas()" >Clear</button>
     </div>
 
     <!-- This is the Div for the drawing Canvas-->
