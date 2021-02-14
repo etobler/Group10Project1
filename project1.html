@@ -8,38 +8,38 @@
   </head>
 
   <body onload="initialize()">
-    <h1 id="title">Welcome to WebSketch!</h1>
-    <p></p>
-    <form id="inputFormID">
-        <table id="inputTableID">
-            <tr>
-                <td>
-                    Username:
-                </td>
-                <td>
-                    <input 	id="userNameID" type="text" 
-                            placeholder="enterUsername" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Password:
-                </td>
-                <td>
-                    <input id="passwordID" type="test"
-                            minlength="8" placeholder="enterPassword" required>
-                </td>
-            </tr>
-			<tr>
-				<td><button id="loginButtonID" type="button" onclick=clickLogin() >Log In!</button></td>
-			</tr>
-    
-        </table>
+    <div class="loginDiv" id="loginDivId">
+        <h1 id="title">Welcome to WebSketch!</h1>
         <p></p>
-    </form>
-
+        <form id="inputFormID">
+            <table id="inputTableID">
+                <tr>
+                    <td>
+                        Username:
+                    </td>
+                    <td>
+                        <input 	id="userNameID" type="text" 
+                        placeholder="enterUsername" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input id="passwordID" type="test"
+                        minlength="8" placeholder="enterPassword" required>
+                    </td>
+                </tr>
+			    <tr>
+				    <td><button id="loginButtonID" type="button" onclick=clickLogin() >Log In!</button></td>
+			    </tr>
+            </table>
+            <p></p>
+        </form>
+    </div>
     <!-- This is the Div for the buttons above the Canvas-->
-    <div class="controlDiv">
+    <div class="controlDiv" id="controlDivId">
         <button id="penButton" class="controlButton" onclick="setColor('black')"></button>
         <button id="eraserButton" class="controlButton" onclick="setColor('white')"></button>
         <button id="colorButton" class="controlButton"></button>

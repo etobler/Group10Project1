@@ -18,6 +18,7 @@ function initialize() {
     context.lineCap = "round";
     setColor('black');
 	setLineWidth('1');
+    hideCanvas();
 }
 
 function clearCanvas() {
@@ -33,6 +34,7 @@ function clickLogin() {
     document.getElementById('userNameID').value='';
     document.getElementById('passwordID').value='';
     clearAfterLogin();
+    showCanvas();
 }
 
 function clearAfterLogin() {
@@ -96,3 +98,16 @@ function mouseUp(event) {
     // function starts when the user stops clicking their moues 
     drawingMode = false;
 }
+
+function hideCanvas() {
+    document.getElementById("controlDivId").style.display = "none";
+    document.getElementById("canvasDivId").style.display = "none";
+    document.getElementById("inputFormId").style.display = "block";
+}
+
+function showCanvas() {
+    document.getElementById("controlDivId").style.display = "block";
+    document.getElementById("canvasDivId").style.display = "block";
+    document.getElementById("inputFormId").style.display = "none";
+}
+

@@ -2,9 +2,13 @@ body {
     background-image: url("background_image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
 }
 
+.loginDiv {
+    margin-top: 100px;
+    transform: scale(2.0);
+}
 
 table {
     margin: auto;
