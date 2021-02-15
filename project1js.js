@@ -11,6 +11,7 @@ var insideCanvas = false; // inside out outside canvas?
 var previousX, previousY = 0;
 // where the mouse is 
 var currentX, currentY = 0;
+var penType;
 
 function initialize() {
     canvas = document.getElementById('drawingCanvasId');
@@ -45,12 +46,15 @@ function clearAfterLogin() {
 function setColor(color) {
     if (color == "black") {
         context.strokeStyle="#000000"
+        penType = "pen"
     }
     else if (color == "white") {
         context.strokeStyle="#FFFFFF"
+        penType = "erase"
     }
     else {
         context.strokeStyle="#FF0000"
+        penType = "pen"
     }
     // Will add more colors here when that functionality is added 
 }
@@ -82,6 +86,15 @@ function startDrawing() {
 function mouseEnteredCanvas(event) {
     // showing that the mouse is now inside the canvas's borders 
     insideCanvas = true;
+    if (penType == "erase" && document.getElementById('drawingCanvasId')){
+        document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
+    }
+    else if (penType == "pen" && document.getElementById('drawingCanvasEraser')) {
+        document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
+    }
+    else {
+        document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
+    }
 }
 
 function mouseLeftCanvas(event) {
