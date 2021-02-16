@@ -11,7 +11,7 @@ var insideCanvas = false; // inside out outside canvas?
 var previousX, previousY = 0;
 // where the mouse is 
 var currentX, currentY = 0;
-var penType;
+var penType = "pen";
 
 function initialize() {
     canvas = document.getElementById('drawingCanvasId');
@@ -39,22 +39,32 @@ function clickLogin() {
 }
 
 function clearAfterLogin() {
-    document.getElementById('inputFormID').remove();
+    document.getElementById('inputFormId').remove();
     document.getElementById('title').innerHTML="WebSketch";
 }
 
 function setColor(color) {
     if (color == "black") {
-        context.strokeStyle="#000000"
+        context.strokeStyle="#000000";
+        if (penType == "erase") {
+            document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
+        }
         penType = "pen"
     }
     else if (color == "white") {
         context.strokeStyle="#FFFFFF"
+        if (penType == "pen") {
+            document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
+        }
         penType = "erase"
     }
     else {
         context.strokeStyle="#FF0000"
+        if (penType = "erase") {
+            document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
+        }
         penType = "pen"
+        
     }
     // Will add more colors here when that functionality is added 
 }
@@ -86,15 +96,6 @@ function startDrawing() {
 function mouseEnteredCanvas(event) {
     // showing that the mouse is now inside the canvas's borders 
     insideCanvas = true;
-    if (penType == "erase" && document.getElementById('drawingCanvasId')){
-        document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
-    }
-    else if (penType == "pen" && document.getElementById('drawingCanvasEraser')) {
-        document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
-    }
-    else {
-        document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
-    }
 }
 
 function mouseLeftCanvas(event) {
@@ -123,6 +124,6 @@ function showCanvas() {
     document.getElementById("controlDivId").style.display = "block";
     document.getElementById("canvasDivId").style.display = "block";
     document.getElementById("marqueeId").style.display = "none";
-    document.getElementById("inputFormId").style.display = "none";
+    // document.getElementById("inputFormId").style.display = "none";
 }
 
