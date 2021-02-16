@@ -9,7 +9,7 @@ body {
 
 .loginDiv {
     margin-top: 100px;
-    transform: scale(2.0);
+    font-size: 30px;
 }
 
 table {
@@ -23,14 +23,14 @@ h1{
 }
 
 .controlDiv {
-    width:          500px;
+    width:          600px;
     margin-right:   auto;
     margin-left:    auto;
     padding-bottom: 10px;
     text-align:     center;
 }
 
-.controlDiv button {
+.controlDiv button, select, input{
     /* width:          95px;
     height:         35px; */
     font-size:      20px;
@@ -42,9 +42,15 @@ h1{
     background-position: center;
     background-color: white;
     background-repeat: no-repeat;
+<<<<<<< HEAD
     margin: auto;
     height: 50px;  
     width: 70px;
+=======
+    /* margin: auto; */
+    height: 50px;  
+    width: 90px;
+>>>>>>> bf7aa058a92942b2789d1c0e7effd3e1b5785b35
 }
 
 .colorCSS{

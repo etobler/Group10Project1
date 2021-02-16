@@ -19,7 +19,11 @@
                     </td>
                     <td>
                         <input 	id="userNameID" type="text" 
+<<<<<<< HEAD
                         placeholder="enterUsername">
+=======
+                        placeholder="enterUsername" style="height:35px;" required>
+>>>>>>> bf7aa058a92942b2789d1c0e7effd3e1b5785b35
                     </td>
                 </tr>
                 <tr>
@@ -28,15 +32,17 @@
                     </td>
                     <td>
                         <input id="passwordID" type="test"
+<<<<<<< HEAD
                         minlength="8" placeholder="enterPassword">
+=======
+                        minlength="8" placeholder="enterPassword" style="height:35px;" required>
+>>>>>>> bf7aa058a92942b2789d1c0e7effd3e1b5785b35
                     </td>
                 </tr>
-			    <tr>
-				    <td><button id="loginButtonID" type="button" onclick=clickLogin() >Log In!</button></td>
-			    </tr>
             </table>
             <p></p>
         </form>
+        <button id="loginButtonID" type="button" onclick=clickLogin() style="font-size:18pt; height:45px; width:100px; margin-left: 880px;">Log In!</button>
     </div>
     
     <div class="marquee" id="marqueeId">
@@ -76,7 +82,7 @@
 
     <!-- This is the Div for the drawing Canvas-->
     <div id="canvasDivId">
-        <canvas id="drawingCanvasId" width="500" height="500"
+        <canvas id="drawingCanvasId" width="600" height="600"
             onmousemove = "mouseMovement(event)"
             onmouseout   = "mouseLeftCanvas(event)"
             onmouseenter = "mouseEnteredCanvas(event)"
