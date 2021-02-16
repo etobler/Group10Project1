@@ -42,15 +42,9 @@ h1{
     background-position: center;
     background-color: white;
     background-repeat: no-repeat;
-<<<<<<< HEAD
-    margin: auto;
-    height: 50px;  
-    width: 70px;
-=======
     /* margin: auto; */
     height: 50px;  
     width: 90px;
->>>>>>> bf7aa058a92942b2789d1c0e7effd3e1b5785b35
 }
 
 .colorCSS{
