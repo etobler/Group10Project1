@@ -12,6 +12,8 @@ var previousX, previousY = 0;
 // where the mouse is 
 var currentX, currentY = 0;
 var penType = "pen";
+var userName;
+var password;
 
 function initialize() {
     canvas = document.getElementById('drawingCanvasId');
@@ -32,10 +34,21 @@ function clearCanvas() {
 }
 
 function clickLogin() {
-    document.getElementById('userNameID').value='';
-    document.getElementById('passwordID').value='';
+    checkUsername();
     clearAfterLogin();
     showCanvas();
+}
+
+function checkUsername() {
+    console.log(document.getElementById('userNameID').value);
+    console.log(document.getElementById("passwordID").value);
+    userName = document.getElementById('userNameID').value;
+    password = document.getElementById("passwordID").value;
+
+}
+
+function checkPassword() {
+
 }
 
 function clearAfterLogin() {
