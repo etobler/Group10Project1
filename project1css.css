@@ -16,6 +16,7 @@ body {
 table {
     margin: auto;
     display: table;
+    text-align: center;
 }
 
 h1{
