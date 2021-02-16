@@ -117,6 +117,7 @@ function hideCanvas() {
     document.getElementById("controlDivId").style.display = "none";
     document.getElementById("canvasDivId").style.display = "none";
     document.getElementById("inputFormId").style.display = "block";
+    //document.getElementsById("loginButtonId")
     document.getElementById("marqueeId").style.display = "block";
 }
 
