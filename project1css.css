@@ -44,7 +44,13 @@ h1{
     background-repeat: no-repeat;
     margin: auto;
     height: 40px;  
-    width: 80px;
+    width: 70px;
+}
+
+.colorCSS{
+    height: 40px;  
+    width: 70px;
+    position: relative;
 }
 
 #penButton {
@@ -56,9 +62,9 @@ h1{
     background-image: url("eraser.jpg");
 }
 
-#colorButton {
+/* #colorButton {
     background-image: url("colorwheel.jpeg");
-}
+} */
 
 
 #sizeButton {
@@ -68,7 +74,6 @@ h1{
 #saveButton {
     background-image: url("save.png");
 }
-
 
 #drawingCanvasId {
       border: 			    2px solid #c3c3c3;
