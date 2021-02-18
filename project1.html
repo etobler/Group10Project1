@@ -8,6 +8,7 @@
   </head>
 
   <body onload="initialize()">
+    <button id="logoutButtonId" type="button" onclick="clickLogout()" style="font-size:18pt; height:45px; width:120px; position: absolute; left: 10px; top: 10px;">Log Out!</button>
     <div class="loginDiv" id="loginDivId">
         <h1 id="title">Welcome to WebSketch!</h1>
         <p></p>
@@ -19,7 +20,7 @@
                     </td>
                     <td>
                         <input 	id="userNameID" type="text" 
-                        placeholder="enterUsername" style="height:35px;" required>
+                        placeholder="enterUsername" minlength="3" style="height:35px;" required>
                     </td>
                 </tr>
                 <tr>
@@ -28,12 +29,12 @@
                     </td>
                     <td>
                         <input id="passwordID" type="test"
-                        minlength="8" placeholder="enterPassword" style="height:35px;" required>
+                        minlength="5" placeholder="enterPassword" style="height:35px;" required>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button id="loginButtonID" type="button" onclick=clickLogin() style="font-size:18pt; height:45px; width:100px;">Log In!</button>
+                        <button id="loginButtonID" type="button" onclick="clickLogin(this.form)" style="font-size:18pt; height:45px; width:100px;">Log In!</button>
                     </td>
                 </tr>
             </table>
@@ -71,8 +72,8 @@
 			<option value="15">Medium</option>
 			<option value="25">Large</option>
 		</select>
-
-        <button id="saveButton" class="controlButton" onclick="saveDrawing()" download="my-file-name.png"></button>
+        <button id="fillBucket" class="controlButton"> </button>
+        <button id="saveButton" class="controlButton"></button>
         <button id="clearButton" class="controlButton" onclick="clearCanvas()" >Clear</button>
     </div>
 

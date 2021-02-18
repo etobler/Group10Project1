@@ -46,7 +46,7 @@ h1{
     background-repeat: no-repeat;
     /* margin: auto; */
     height: 50px;  
-    width: 90px;
+    width: 80px;
 }
 
 .colorCSS{
@@ -75,6 +75,10 @@ h1{
 
 #saveButton {
     background-image: url("save.png");
+}
+
+#fillBucket {
+    background-image: url("fillbucket.png");
 }
 
 #drawingCanvasId {
