@@ -67,7 +67,7 @@
         <button id="penButton" class="controlButton" onclick="setColor('black')"></button>
         <button id="eraserButton" class="controlButton" onclick="setColor('white')"></button>
 
-        <input type="color" id="colorpicker" class="controlButton" value="#0000ff">
+        <input type="color" id="colorpicker" class="controlButton" value="#0000ff" onchange="setColor()">
 
         <select id="sizeSelector" class="controlButton" onchange="setLineWidth(value)">
 			<option value= "5">Small</option>
