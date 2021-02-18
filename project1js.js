@@ -79,6 +79,16 @@ function setColor(color) {
     // Will add more colors here when that functionality is added 
 }
 
+function fillCanvas() {
+    console.log("test 1");
+    context.beginPath();
+    context.rect(0, 0, 600, 600);
+    context.fillStyle = "red";
+    context.fill();
+    console.log("test")
+    
+}
+
 function setLineWidth(width) {
     context.lineWidth = width;
 }
