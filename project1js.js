@@ -33,23 +33,16 @@ function clearCanvas() {
     }
 }
 
-function clickLogin() {
-    checkUsername();
-    clearAfterLogin();
-    showCanvas();
+function clickLogin(form) {
+    if (!form.checkValidity()) {
+        alert("Please check your input, username must be at least 3 characters, \n Password must be at least 5 charcters")
+    }
+    else {
+        clearAfterLogin();
+        showCanvas();
+    }
 }
 
-function checkUsername() {
-    console.log(document.getElementById('userNameID').value);
-    console.log(document.getElementById("passwordID").value);
-    userName = document.getElementById('userNameID').value;
-    password = document.getElementById("passwordID").value;
-
-}
-
-function checkPassword() {
-
-}
 
 function clearAfterLogin() {
     document.getElementById('inputFormId').remove();
