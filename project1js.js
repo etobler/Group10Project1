@@ -127,3 +127,13 @@ function showCanvas() {
     // document.getElementById("inputFormId").style.display = "none";
 }
 
+function saveDrawing() {
+    var confirmSave = confirm("Do you want to download your drawing?");
+    if (confirmSave === true) {
+        var button = document.getElementById('saveButton');
+        button.addEventListener('click', function (e) {
+            var dataURL = canvas.toDataURL('image/png');
+            button.href = dataURL;
+        });
+    }
+}
