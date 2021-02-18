@@ -143,10 +143,18 @@ function showCanvas() {
 function saveDrawing() {
     var confirmSave = confirm("Do you want to download your drawing?");
     if (confirmSave === true) {
-        var button = document.getElementById('saveButton');
-        button.addEventListener('click', function (e) {
-            var dataURL = canvas.toDataURL('image/png');
-            button.href = dataURL;
-        });
+
+        // get canvas data 
+        var image = canvas.toDataURL();  
+  
+        // create temporary link  
+        var tmpLink = document.createElement( 'a' );  
+        tmpLink.download = 'image.png'; // set the name of the download file 
+        tmpLink.href = image;  
+      
+        // temporarily add link to body and initiate the download  
+        document.body.appendChild( tmpLink );  
+        tmpLink.click();  
+        document.body.removeChild( tmpLink ); 
     }
 }
