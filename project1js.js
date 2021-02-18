@@ -151,7 +151,7 @@ function showCanvas() {
 }
 
 function saveDrawing() {
-    var confirmSave = confirm("Do you want to download your drawing?");
+    var confirmSave = confirm("Do you want to download your WebSketch?");
     if (confirmSave === true) {
 
         // get canvas data 
