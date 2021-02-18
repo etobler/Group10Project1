@@ -14,12 +14,13 @@ var currentX, currentY = 0;
 var penType = "pen";
 var userName;
 var password;
+var color;
 
 function initialize() {
     canvas = document.getElementById('drawingCanvasId');
     context = canvas.getContext('2d');
     context.lineCap = "round";
-    setColor('black');
+    //setColor('black');
 	setLineWidth('1');
     hideCanvas();
 }
@@ -53,9 +54,12 @@ function clearAfterLogin() {
     document.getElementById('title').innerHTML="WebSketch";
 }
 
-function setColor(color) {
+function setColor() {
+    color = document.getElementById("colorpicker").value;
+    context.strokeStyle = color;
+    console.log(color);
     if (color == "black") {
-        context.strokeStyle="#000000";
+        
         if (penType == "erase") {
             document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
         }
@@ -69,7 +73,7 @@ function setColor(color) {
         penType = "erase"
     }
     else {
-        context.strokeStyle="#FF0000"
+        context.strokeStyle = color;
         if (penType = "erase") {
             document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
         }
@@ -78,6 +82,11 @@ function setColor(color) {
     }
     // Will add more colors here when that functionality is added 
 }
+
+// function changeColor() {
+//     color = document.getElementById("colorpicker").value;
+//     context.strokeStyle = color;
+// }
 
 function fillCanvas() {
     console.log("test 1");
