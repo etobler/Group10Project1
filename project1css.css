@@ -13,6 +13,15 @@ body {
     text-align: center;
 }
 
+#loginButtonID, #logoutButtonId {
+    font-size: 18pt; 
+    height: 45px;
+    width: 385px;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
 table {
     margin: auto;
     display: table;
