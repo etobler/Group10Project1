@@ -39,13 +39,17 @@ function clickLogin(form) {
     }
     else {
         clearAfterLogin();
+        document.getElementById('logoutButtonId').style.display = "block";
         showCanvas();
     }
 }
 
+function clickLogout() {
+    document.getElementById('title').innerHTML="Welcome to WebSketch!";
+    hideCanvas()
+}
 
 function clearAfterLogin() {
-    document.getElementById('inputFormId').remove();
     document.getElementById('title').innerHTML="WebSketch";
 }
 
@@ -122,14 +126,17 @@ function mouseUp(event) {
 function hideCanvas() {
     document.getElementById("controlDivId").style.display = "none";
     document.getElementById("canvasDivId").style.display = "none";
+    document.getElementById("logoutButtonId").style.display = "none";
     document.getElementById("inputFormId").style.display = "block";
     document.getElementById("marqueeId").style.display = "block";
+
 }
 
 function showCanvas() { 
+    document.getElementById("logoutButtonId").style.display = "block";
     document.getElementById("controlDivId").style.display = "block";
     document.getElementById("canvasDivId").style.display = "block";
     document.getElementById("marqueeId").style.display = "none";
-    // document.getElementById("inputFormId").style.display = "none";
+    document.getElementById("inputFormId").style.display = "none";
 }
 
