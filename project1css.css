@@ -77,6 +77,10 @@ h1{
     background-image: url("save.png");
 }
 
+/* #fillBucket {
+    background-image: url("fillbucket.png");
+} */
+
 #drawingCanvasId {
       border: 			    2px solid #c3c3c3;
       margin-right: 		auto;
