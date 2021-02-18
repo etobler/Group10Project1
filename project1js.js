@@ -15,6 +15,7 @@ var penType = "pen";
 var userName;
 var password;
 var color;
+var fillColor = "red";
 
 function initialize() {
     canvas = document.getElementById('drawingCanvasId');
@@ -58,29 +59,44 @@ function setColor() {
     color = document.getElementById("colorpicker").value;
     context.strokeStyle = color;
     console.log(color);
-    if (color == "black") {
-        
-        if (penType == "erase") {
-            document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
-        }
-        penType = "pen"
-    }
-    else if (color == "white") {
-        context.strokeStyle="#FFFFFF"
-        if (penType == "pen") {
-            document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
-        }
-        penType = "erase"
+    if (penType == "erase") {
+        document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
     }
     else {
-        context.strokeStyle = color;
-        if (penType = "erase") {
-            document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
-        }
-        penType = "pen"
-        
+        //nothing 
     }
+    penType = "pen";
+    // if (color == "black") {
+    //     if (penType == "erase") {
+    //         document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
+    //     }
+    //     penType = "pen"
+    // }
+    // else if (color == "white") {
+    //     context.strokeStyle="#FFFFFF"
+    //     if (penType == "pen") {
+    //         document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
+    //     }
+    //     penType = "erase"
+    // }
+    // else {
+    //     context.strokeStyle = color;
+    //     if (penType = "erase") {
+    //         document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
+    //     }
+    //     penType = "pen"
+        
+    // }
     // Will add more colors here when that functionality is added 
+}
+
+function setEraser() {
+    console.log(penType)
+    if (penType == "pen") {
+            document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
+    }
+    penType = "erase"
+    context.strokeStyle= fillColor;
 }
 
 // function changeColor() {
