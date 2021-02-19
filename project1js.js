@@ -15,13 +15,12 @@ var penType = "pen";
 var userName;
 var password;
 var color;
-var fillColor = "red";
+var fillColor = "white";
 
 function initialize() {
     canvas = document.getElementById('drawingCanvasId');
     context = canvas.getContext('2d');
     context.lineCap = "round";
-    //setColor('black');
 	setLineWidth('1');
     hideCanvas();
 }
@@ -32,6 +31,7 @@ function clearCanvas() {
     var confirmClear = confirm("Do you really want to clear the canvas?");
     if (confirmClear === true) {
         context.clearRect(0, 0, 600, 600);
+        fillColor = "white";
     }
 }
 
@@ -66,28 +66,6 @@ function setColor() {
         //nothing 
     }
     penType = "pen";
-    // if (color == "black") {
-    //     if (penType == "erase") {
-    //         document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
-    //     }
-    //     penType = "pen"
-    // }
-    // else if (color == "white") {
-    //     context.strokeStyle="#FFFFFF"
-    //     if (penType == "pen") {
-    //         document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
-    //     }
-    //     penType = "erase"
-    // }
-    // else {
-    //     context.strokeStyle = color;
-    //     if (penType = "erase") {
-    //         document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
-    //     }
-    //     penType = "pen"
-        
-    // }
-    // Will add more colors here when that functionality is added 
 }
 
 function setEraser() {
@@ -99,19 +77,13 @@ function setEraser() {
     context.strokeStyle= fillColor;
 }
 
-// function changeColor() {
-//     color = document.getElementById("colorpicker").value;
-//     context.strokeStyle = color;
-// }
-
 function fillCanvas() {
-    console.log("test 1");
+    fillColor = document.getElementById("colorpicker").value;
+    console.log(color);
     context.beginPath();
     context.rect(0, 0, 600, 600);
-    context.fillStyle = "red";
+    context.fillStyle = fillColor;
     context.fill();
-    console.log("test")
-    
 }
 
 function setLineWidth(width) {
