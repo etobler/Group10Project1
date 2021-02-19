@@ -4,20 +4,18 @@
 
 var canvas;
 var context;
-
 var drawingMode = false;  // drawing or moving?
 var insideCanvas = false; // inside out outside canvas?
-// where the mouse was
-var previousX, previousY = 0;
-// where the mouse is 
-var currentX, currentY = 0;
+var previousX, previousY = 0; // where the mouse was
+var currentX, currentY = 0; // where the mouse is 
 var penType = "pen";
 var userName;
 var password;
 var color;
-var fillColor = "white";
+var fillColor = "white"; // setting the background of the canvas to white by default
 
 function initialize() {
+    // setting up the canvas element
     canvas = document.getElementById('drawingCanvasId');
     context = canvas.getContext('2d');
     context.lineCap = "round";
@@ -27,7 +25,6 @@ function initialize() {
 
 function clearCanvas() {
     //The following hard coded values are dependent on the size of canvas
-
     var confirmClear = confirm("Do you really want to clear the canvas?");
     if (confirmClear === true) {
         context.clearRect(0, 0, 600, 600);
@@ -36,8 +33,9 @@ function clearCanvas() {
 }
 
 function clickLogin(form) {
+    // if input isn't valid pops up an error message
     if (!form.checkValidity()) {
-        alert("Please check your input, username must be at least 3 characters, \n Password must be at least 5 charcters")
+        alert("Please check your input, username must be at least 3 characters, \n Password must be at least 5 characters")
     }
     else {
         clearAfterLogin();
@@ -56,9 +54,10 @@ function clearAfterLogin() {
 }
 
 function setColor() {
+    // getting color from color picker 
     color = document.getElementById("colorpicker").value;
     context.strokeStyle = color;
-    console.log(color);
+    // if the pen type was previously an eraser changing the id to make the pen cursor work
     if (penType == "erase") {
         document.getElementById('drawingCanvasEraser').id = "drawingCanvasId";
     }
@@ -69,15 +68,17 @@ function setColor() {
 }
 
 function setEraser() {
-    console.log(penType)
+    // possibly changing the id to get the eraser cursor to work
     if (penType == "pen") {
             document.getElementById('drawingCanvasId').id = 'drawingCanvasEraser';
     }
     penType = "erase"
+    // setting the eraser the same color as the fill
     context.strokeStyle= fillColor;
 }
 
 function fillCanvas() {
+    // getting color from color picker than putting a rectangle over the canvas of that color
     fillColor = document.getElementById("colorpicker").value;
     console.log(color);
     context.beginPath();
@@ -131,6 +132,7 @@ function mouseUp(event) {
 }
 
 function hideCanvas() {
+    // function to hide the canvas
     document.getElementById("controlDivId").style.display = "none";
     document.getElementById("canvasDivId").style.display = "none";
     document.getElementById("logoutButtonId").style.display = "none";
@@ -140,6 +142,7 @@ function hideCanvas() {
 }
 
 function showCanvas() { 
+    // function to display the canvas 
     document.getElementById("logoutButtonId").style.display = "block";
     document.getElementById("controlDivId").style.display = "block";
     document.getElementById("canvasDivId").style.display = "block";
@@ -148,6 +151,7 @@ function showCanvas() {
 }
 
 function saveDrawing() {
+    // function to save the drawing
     var confirmSave = confirm("Do you want to download your WebSketch?");
     if (confirmSave === true) {
 

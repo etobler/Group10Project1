@@ -4,7 +4,6 @@ body {
     background-size: cover;
     justify-content: center;
     align-items: center;
-    /* background-position: center; */
 }
 
 .loginDiv {
@@ -42,8 +41,6 @@ h1{
 }
 
 .controlDiv button, select, input{
-    /* width:          95px;
-    height:         35px; */
     font-size:      20px;
     vertical-align: middle;
 }
@@ -53,7 +50,6 @@ h1{
     background-position: center;
     background-color: white;
     background-repeat: no-repeat;
-    /* margin: auto; */
     height: 50px;  
     width: 80px;
 }
@@ -72,11 +68,6 @@ h1{
 #eraserButton {
     background-image: url("eraser.jpg");
 }
-
-/* #colorButton {
-    background-image: url("colorwheel.jpeg");
-} */
-
 
 #sizeButton {
     background-image: url("blackdot.jpg");
@@ -122,29 +113,6 @@ h1{
     height: 250px;
     overflow: hidden;
 }
-
-/* This could eventually be used to fade the images in and out as the enter and exit the marquee
-but I need to mess with the values.
-
-.marquee:before, .marquee:after {
-    position: absolute;
-    top: 0;
-    width: 10rem;
-    height: 100%;
-    content: "";
-    z-index: 1;
-}
-
-marquee:before {
-    left: 0;
-    background: linear-gradient(to right, #111 0%, transparent 100%);
-}
-
-marquee:after {
-    right: 0;
-    background: linear-gradient(to left, #111 0%, transparent 100%);
-} 
-*/
 
 .marqueeContent {
     margin: 0;
